@@ -134,6 +134,23 @@ var searchRemoveFocused = function searchRemoveFocused() {
 searchEl.addEventListener('click', searchInputFocus);
 searchInputEl.addEventListener('focus', searchAddFocused);
 searchInputEl.addEventListener('blur', searchRemoveFocused);
+var badgeEl = document.querySelector('header .badges');
+window.addEventListener('scroll', _.throttle(function () {
+  console.log('scroll!');
+  if (window.scrollY > 500) {
+    gsap.to(badgeEl, 0.6, {
+      opacity: 0,
+      display: 'none'
+    });
+  } else {
+    gsap.to(badgeEl, 0.6, {
+      opacity: 1,
+      display: 'block'
+    });
+  }
+}, 300));
+// _.throttle(함수, 시간)
+// gsap.to(요소, 지속시간, 옵션);
 },{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -159,7 +176,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64067" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50144" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
