@@ -18,7 +18,7 @@ a {
   margin: 0 auto;
   position: relative;
 }
-
+// BUTTON
 .btn {
   width: 130px;
   padding: 10px;
@@ -70,7 +70,7 @@ a {
   }
 }
 
-/* HEADER */
+// HEADER
 header {
   width: 100%;
   background-color: #f6f5f0;
@@ -295,7 +295,7 @@ header {
     opacity: 0;
   }
 }
-
+// NOTICE
 .notice {
   .notice-line {
     position: relative;
@@ -330,7 +330,7 @@ header {
           font-weight: 700;
           margin-left: 20px;
         }
-        .swiper-container {
+        > .swiper-container {
           height: 62px;
           flex-grow: 1;
           .swiper-slide {
@@ -377,6 +377,19 @@ header {
           }
         }
       }
+    }
+  }
+  .promotion {
+    height: 636px;
+    background-color: #f6f5ef;
+    position: relative;
+    > .swiper-container {
+      width: calc(819px * 3 + 20px);
+      height: 553px;
+      position: absolute;
+      top: 40px;
+      left: 50%;
+      margin-left: -1238.5px;
     }
   }
 }
