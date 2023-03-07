@@ -333,6 +333,15 @@ header {
         .swiper-container {
           height: 62px;
           flex-grow: 1;
+          .swiper-slide {
+            height: 62px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            > a {
+              color: #fff;
+            }
+          }
         }
         .notice-line__more {
           width: 62px;
