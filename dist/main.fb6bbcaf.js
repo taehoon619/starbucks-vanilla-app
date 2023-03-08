@@ -168,6 +168,29 @@ new Swiper('.notice-line .swiper-container', {
   // 자동 재생 여부
   loop: true // 반복 재생 여부
 });
+
+new Swiper('.promotion .swiper-container', {
+  slidesPerView: 3,
+  // 한번에 보여줄 슬라이드 개수
+  spaceBetween: 10,
+  // 슬라이드 사이 여백
+  centeredSlides: true,
+  // 1번 슬라이드가 가운데 보이기
+  loop: true,
+  autoplay: {
+    delay: 4000
+  },
+  pagination: {
+    el: '.promotion .swiper-pagination',
+    // 페이지 번호 요소
+    clickable: true // 사용자의 페이지 번호 요소 제어
+  },
+
+  navigation: {
+    prevEl: '.promotion .swiper-prev',
+    nextEl: '.promotion .swiper-next'
+  }
+});
 },{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -193,7 +216,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50138" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49524" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
