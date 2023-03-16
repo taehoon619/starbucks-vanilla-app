@@ -1,15 +1,15 @@
-let tag = document.createElement('script');
+var tag = document.createElement('script');
 tag.src = 'https://www.youtube.com/iframe_api';
-let firstScriptTag = document.getElementsByTagName('script')[0];
+var firstScriptTag = document.getElementsByTagName('script')[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
 function onYouTubePlayerAPIReady() {
   new YT.Player('player', {
-    videoId: 'EJF919p_hb0',
+    videoId: 'EJF919p_hb0&t=2s',
     playerVars: {
       autoplay: true,
       loop: true,
-      playlist: 'EJF919p_hb0',
+      playlist: 'EJF919p_hb0&t=2s',
     },
     events: {
       onReady: function (event) {
