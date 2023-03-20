@@ -61,7 +61,8 @@ a {
   }
   &.btn--white {
     color: #fff;
-    background-color: #fff;
+    background-color: transparent;
+    border: 2px solid #fff;
     &:hover {
       color: #333;
       background-color: #fff;
@@ -582,6 +583,52 @@ header {
         margin-bottom: 15px;
       }
       .more {
+      }
+    }
+  }
+}
+// RESERVE COFFEE
+.reserve-coffee {
+  background-image: url(../images/reserve_bg.jpg);
+  .inner {
+    height: 400px;
+    .reserve-logo {
+      position: absolute;
+      top: 110px;
+      left: 0;
+    }
+    .text-group {
+      position: absolute;
+      top: 124px;
+      left: 208px;
+    }
+    .product {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+}
+//PICK YOUR FAVORITE
+.pick-your-favorite {
+  background-image: url(../images/favorite_bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  .inner {
+    padding: 110px 0;
+    .text-group {
+      width: 362px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      margin-left: 100px;
+      .title {
+        margin-bottom: 40px;
+      }
+      .description {
+        margin-bottom: 40px;
       }
     }
   }
