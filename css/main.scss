@@ -5,7 +5,6 @@ body {
   font-size: 16px;
   font-weight: 400;
   line-height: 1.4;
-  height: 3000px;
 }
 img {
   display: block;
@@ -559,10 +558,31 @@ header {
       top: 350px;
       left: 150px;
     }
+  }
+}
+
+// SEASON PRODUCT
+.season-product {
+  background-image: url(../images/season_product_bg.jpg);
+  .inner {
+    height: 400px;
     .floating3 {
       position: absolute;
-      bottom: -200px;
+      top: -200px;
       right: 0;
+    }
+    .text-group {
+      position: absolute;
+      top: 110px;
+      right: 100px;
+      .title {
+        margin-bottom: 10px;
+      }
+      .description {
+        margin-bottom: 15px;
+      }
+      .more {
+      }
     }
   }
 }
