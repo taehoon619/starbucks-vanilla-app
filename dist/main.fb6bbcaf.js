@@ -135,6 +135,7 @@ searchEl.addEventListener('click', searchInputFocus);
 searchInputEl.addEventListener('focus', searchAddFocused);
 searchInputEl.addEventListener('blur', searchRemoveFocused);
 var badgeEl = document.querySelector('header .badges');
+var toTopEl = document.querySelector('#to-top');
 window.addEventListener('scroll', _.throttle(function () {
   console.log('scroll!');
   if (window.scrollY > 500) {
@@ -142,16 +143,26 @@ window.addEventListener('scroll', _.throttle(function () {
       opacity: 0,
       display: 'none'
     });
+    gsap.to(toTopEl, 0.2, {
+      x: 0
+    });
   } else {
     gsap.to(badgeEl, 0.6, {
       opacity: 1,
       display: 'block'
     });
+    gsap.to(toTopEl, 0.2, {
+      x: 100
+    });
   }
 }, 300));
 // _.throttle(함수, 시간)
 // gsap.to(요소, 지속시간, 옵션);
-
+toTopEl.addEventListener('click', function () {
+  gsap.to(window, 0.7, {
+    scrollTo: 0
+  });
+});
 var fadeEls = document.querySelectorAll('.visual .fade_in');
 fadeEls.forEach(function (fadeEl, index) {
   gsap.to(fadeEl, 1, {
@@ -261,7 +272,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50442" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50837" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
